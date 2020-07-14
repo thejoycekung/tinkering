@@ -2,3 +2,4 @@
 *.csr
 *-csr.json
 ca-config.json
+*.kubeconfig
