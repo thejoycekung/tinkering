@@ -7,3 +7,6 @@ Think of it more like a public notebook of scribbles and doodles, but with code.
 \[And yes, I'm fully aware that that's what separate repos are for. But I feel like making a whole repo just to say 'Hello, outside' feels just a tad overkill. So have a palimpsest of a repo, instead.\]
 
 Heavily inspired by [Evy's garden](https://evy.garden).
+
+Branches:
+- `kubernetes-hard` inside `kube`: running through Kelsey Hightower's Kubernetes the Hard Way
