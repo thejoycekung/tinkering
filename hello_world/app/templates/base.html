@@ -5,9 +5,20 @@
 </head>
 
 <body>
-    <div><a href="/index">home</a></div>
+    <div><a href="{{ url_for('index') }}">home</a>
+    <a href="{{ url_for('submit_note') }}">inbox</a></div>
     <hr>
-    {% block content %}{% endblock %}
+    {% block content %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% endblock %}
 </body>
 
 </html>

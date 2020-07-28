@@ -1,5 +1,6 @@
 from app import app
-from flask import render_template
+from app.forms import NoteForm
+from flask import render_template, flash, redirect, url_for
 
 @app.route('/')
 @app.route('/index')
@@ -9,3 +10,12 @@ def index():
 @app.route('/easter')
 def easter():
     return render_template('easter.html', body="If I write something here will it print?")
+
+@app.route('/note', methods=['GET', 'POST'])
+def submit_note():
+    form = NoteForm()
+    if form.validate_on_submit():
+        flash('Message {} received! Redirecting ...'.format(
+            form.message.data))
+        return redirect(url_for('index'))
+    return render_template('note.html', title='Leave a note', form=form)
