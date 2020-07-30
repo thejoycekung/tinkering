@@ -1,24 +1,20 @@
-<html>
+{% extends 'bootstrap/base.html' %}
 
-<head>
-    <title>{{ title }}</title>
-</head>
+{% block title %}
+{{ title }}
+{% endblock %}
 
-<body>
-    <div><a href="{{ url_for('index') }}">home</a>
-    <a href="{{ url_for('submit_note') }}">inbox</a></div>
-    <hr>
-    {% block content %}
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <ul>
-        {% for message in messages %}
-        <li>{{ message }}</li>
-        {% endfor %}
+{% block navbar %}
+<nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+        <li><a href="{{ url_for('index') }}">home</a></li>
+        <li><a href="{{ url_for('submit_note') }}">leave a message</a></li>
     </ul>
-    {% endif %}
-    {% endwith %}
-    {% endblock %}
-</body>
+</nav>
+{% endblock %}
 
-</html>
+{% block content %}
+<div class="container">
+{% block app_content %}{% endblock %}
+</div>
+{% endblock %}
