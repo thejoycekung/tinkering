@@ -2,4 +2,13 @@
 
 {% block content %}
 <h1>this is a {{ noun }}</h1>
+
+<ul class=entries>
+    {% for entry in entries %}
+    <li>
+        <h2>{{ entry.name }}</h2>{{ entry.timestamp|safe }} {{ entry.message|safe }}
+        {% else %}
+    <li><em>You're our first guest! Leave a message in the inbox!</em>
+    {% endfor %}
+</ul>
 {% endblock %}
