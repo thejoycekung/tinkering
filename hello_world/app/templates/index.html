@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<h1>this is a {{ noun }}</h1>
+
+{% for entry in entries %}
+<p>{{ entry.message|safe }} <br />
+- <em>{{ entry.name|safe }}</em> {{ entry.timestamp|safe }}</p>
+{% endfor %}
+{% endblock %}
