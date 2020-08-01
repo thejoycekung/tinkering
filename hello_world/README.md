@@ -8,4 +8,8 @@ The underlying infrastructure:
 2. Using Terraform (taken from Artemmkin's [Infrastructure as Code Tutorial](https://github.com/Artemmkin/infrastructure-as-code-tutorial)) you can then configure a Kubernetes cluster using GKE.
 3. The `deployment.yaml` specifies the `LoadBalancer` service (to access the app outside of the cluster), a `PostgreSQL` pod+service with a `PersistentVolume` as the database, and of course a pod to run the app itself using our created image.
 
+It'll look like this when you're done (with some messages, obviously!)
+
+![image](https://user-images.githubusercontent.com/13409103/89110411-5b0b6b00-d418-11ea-970c-bf32b9048110.png)
+
 Post-mortem and walkthrough of the steps I took coming later!
