@@ -5,6 +5,6 @@
 
 {% for entry in entries %}
 <p>{{ entry.message|safe }} <br />
-{{ entry.name|safe }} {{ entry.timestamp|safe }}</p>
+- <em>{{ entry.name|safe }}</em> {{ entry.timestamp|safe }}</p>
 {% endfor %}
 {% endblock %}
