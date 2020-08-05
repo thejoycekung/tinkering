@@ -7,3 +7,4 @@
 *-csr.json
 ca-config.json
 *.kubeconfig
+*.exercism/
