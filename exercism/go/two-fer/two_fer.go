@@ -1,11 +1,13 @@
-// Twofer gives the message "One for X, one for me."
+// Package twofer gives the message "One for X, one for me." to a user.
 package twofer
 
-// ShareWith takes an optional string `name` and returns the string "One for name, one for me."
-// If name is not given, "you" is used.
+import "fmt"
+
+// ShareWith takes an optional string `name` and returns the string "One for name, one for me." to the user.
+// If `name` is not given, "you" is used.
 func ShareWith(name string) string {
-	if name != "" {
-		return "One for " + name + ", one for me."
+	if name == "" {
+		name = "you"
 	}
-	return "One for you, one for me."
+	return fmt.Sprintf("One for %s, one for me.", name)
 }
