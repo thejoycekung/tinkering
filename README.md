@@ -11,3 +11,4 @@ Slightly inspired by [Evy's garden](https://evy.garden). Except this is more of 
 Trinkets:
 - `kube`: running through Kelsey Hightower's Kubernetes the Hard Way  
 - `hello_world`: creating a guestbook using Flask and hosting it on GKE configured using Terraform
+- `modch`: making a CLI `chmod` calculator in Go
