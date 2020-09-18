@@ -12,6 +12,6 @@ It'll look like this when you're done (with some messages, obviously!)
 
 ![image](https://user-images.githubusercontent.com/13409103/89110411-5b0b6b00-d418-11ea-970c-bf32b9048110.png)
 
-[Post-mortem](https://thejoycekung.github.io/blog/2020-08-02/flask-postmortem)
+[Post-mortem](https://github.com/thejoycekung/archived_blog/blob/master/_posts/2020-08-02-flask-postmortem.md)
 
 Walkthrough of the steps I took (maybe) coming later!
